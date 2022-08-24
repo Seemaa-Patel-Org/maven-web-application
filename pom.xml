@@ -98,7 +98,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://http://13.126.54.251:7394/seemapatelorg/repository/walmart-release/</url>
+	      <url>http://13.126.54.251:7394/seemapatelorg/repository/walmart-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
