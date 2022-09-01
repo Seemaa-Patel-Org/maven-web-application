@@ -1,5 +1,5 @@
 node{
-def mavenHome = tool name: "maven 3.8.5"
+def mavenHome = tool name: "maven 3.8.6"
 echo "jenkins build url is: ${env.JENKINS_URL}"
 echo "node name is: ${env.NODE_NAME}"
 echo "job name is: ${env.JOB_NAME}"
@@ -24,7 +24,7 @@ sh "${mavenHome}/bin/mvn clean deploy"
 }
 stage('DeployAppIntoTomcatServer'){
 sshagent(['5526ab32-4a27-433d-b4ec-cb7fd5338fab']){
-sh "scp -o StrictHostKeyChecking=notarget/maven-web-application.war ec2-user@172.31.0.18:/opt/apache-tomcat-9.0.65/webapps
+sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.0.18:/opt/apache-tomcat-9.0.65/webapps"
 }
 }
 }
